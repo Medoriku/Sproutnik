@@ -9,7 +9,7 @@ Arduino-based sensor integration for atmospheric and environmental data collecti
 - **SparkFun TMP117** - High-precision temperature sensors x2 (I2C: 0x48, 0x4A)
 - **XENSIV PAS CO2** - CO₂ concentration sensor (I2C: 0x28)
 - **Adafruit TSL2591** - Light/luminosity sensor (I2C: 0x29)
-- **Grove O2 Sensor Pro (GGC2330-O2)** - Oxygen concentration (Analog: A5)
+- **PFA Fixed Flow Meter (Seeed)** - Flow measurement (Analog: A5)
 
 ## Wiring
 
@@ -19,10 +19,10 @@ All I2C sensors share the default bus:
 - **Power**: 3.3V (BME280, TSL2591) or 5V (TMP117, PASCO2 as specified)
 - **GND**: Common ground
 
-Grove O2 Sensor:
+PFA Fixed Flow Meter (analog output):
 - **VCC**: 5V
 - **GND**: GND
-- **VO (Analog Output)**: A5
+- **Analog OUT**: A5
 
 ## Installation
 
@@ -48,7 +48,7 @@ Grove O2 Sensor:
 
 - Open Serial Monitor at **115200 baud**
 - Sensor readings print continuously
-- O₂ sensor requires **5-minute warmup** for accurate readings
+- Flow meter is analog; allow a short settling time after power-up
 - CO₂ sensor measures every 5 seconds minimum
 
 ## File Structure
