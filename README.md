@@ -1,0 +1,82 @@
+# Sproutnik Environmental Monitoring System
+
+Arduino-based sensor integration for atmospheric and environmental data collection using the GIGA R1 WiFi board.
+
+## Hardware Components
+
+- **Arduino GIGA R1 WiFi** - Main controller
+- **SparkFun BME280** - Temperature, humidity, pressure, altitude (I2C: 0x76/0x77)
+- **SparkFun TMP117** - High-precision temperature sensors x2 (I2C: 0x48, 0x4A)
+- **XENSIV PAS CO2** - CO₂ concentration sensor (I2C: 0x28)
+- **Adafruit TSL2591** - Light/luminosity sensor (I2C: 0x29)
+- **Grove O2 Sensor Pro (GGC2330-O2)** - Oxygen concentration (Analog: A5)
+
+## Wiring
+
+All I2C sensors share the default bus:
+- **SDA**: D20
+- **SCL**: D21
+- **Power**: 3.3V (BME280, TSL2591) or 5V (TMP117, PASCO2 as specified)
+- **GND**: Common ground
+
+Grove O2 Sensor:
+- **VCC**: 5V
+- **GND**: GND
+- **VO (Analog Output)**: A5
+
+## Installation
+
+1. Install the Arduino IDE (1.8.9+)
+2. Install the GIGA R1 WiFi board package via Boards Manager
+3. Install required libraries via Library Manager:
+   - SparkFun BME280
+   - SparkFun TMP117
+   - Adafruit TSL2591
+   - Adafruit Unified Sensor
+
+4. Clone this repository:
+   ```bash
+   git clone https://github.com/Medoriku/Sproutnik.git
+   cd Sproutnik
+   ```
+
+5. Open `Complete.ino` in Arduino IDE
+6. Select **Arduino GIGA R1 WiFi** as your board
+7. Upload the sketch
+
+## Usage
+
+- Open Serial Monitor at **115200 baud**
+- Sensor readings print continuously
+- O₂ sensor requires **5-minute warmup** for accurate readings
+- CO₂ sensor measures every 5 seconds minimum
+
+## File Structure
+
+```
+Complete/
+├── Complete.ino              # Main sketch
+├── Oxygen.cpp/.h             # O2 sensor driver
+├── SparkFunBME280.cpp/.h     # BME280 atmospheric sensor
+├── pas-co2-*.cpp/.hpp        # PAS CO2 sensor drivers
+├── xensiv_pasco2*            # XENSIV PAS CO2 core library
+└── README.md
+```
+
+## Sensor Addresses
+
+Run an I2C scanner to verify addresses:
+- **BME280**: 0x76 or 0x77
+- **TMP117 #1**: 0x48
+- **TMP117 #2**: 0x4A
+- **PAS CO2**: 0x28
+- **TSL2591**: 0x29
+
+## Author
+
+**Diyora Daminova**  
+Created: January 21, 2026
+
+## License
+
+Open source - feel free to use and modify.
