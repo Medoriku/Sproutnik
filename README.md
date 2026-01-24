@@ -54,9 +54,7 @@ Grove O2 Sensor Pro:
 
 - Open Serial Monitor at **115200 baud**
 - Sensor readings print continuously
-- Flow meter outputs pulses on D2; allow a short settling time after power-up
-- O₂ sensor warms up for ~5 minutes before readings stabilize
-- CO₂ sensor measures every 5 seconds minimum
+- Allow a short settling time after power-up
 
 ## File Structure
 
@@ -64,7 +62,7 @@ Grove O2 Sensor Pro:
 Complete/
 ├── Complete.ino              # Main sketch
 ├── Oxygen.cpp/.h             # O2 sensor driver
-├── SparkFunBME280.cpp/.h     # BME280 atmospheric sensor
+├── SparkFunBME280.cpp/.h     # BME280 atmospheric sensor driver
 ├── pas-co2-*.cpp/.hpp        # PAS CO2 sensor drivers
 ├── xensiv_pasco2*            # XENSIV PAS CO2 core library
 └── README.md
@@ -73,7 +71,7 @@ Complete/
 ## Sensor Addresses
 
 Run an I2C scanner to verify addresses:
-- **BME280**: 0x76 or 0x77
+- **BME280**: 0x77
 - **TMP117 #1**: 0x48
 - **TMP117 #2**: 0x4A
 - **PAS CO2**: 0x28
