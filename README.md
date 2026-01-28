@@ -5,13 +5,13 @@ Arduino-based sensor integration for atmospheric and environmental data collecti
 ## Hardware Components
 
 - **Arduino GIGA R1 WiFi** - Main controller
-- **SparkFun BME280** - Temperature, humidity, pressure, altitude (I2C: 0x76/0x77)
+- **SparkFun BME280** - Temperature, humidity, pressure, altitude (I2C: 0x77)
 - **SparkFun TMP117** - High-precision temperature sensors x2 (I2C: 0x48, 0x4A)
 - **XENSIV PAS CO2** - CO₂ concentration sensor (I2C: 0x28)
 - **Adafruit TSL2591** - Light/luminosity sensor (I2C: 0x29)
 - **PFA Fixed Flow Meter (Seeed)** - Flow measurement (Digital: D2 pulse)
 - **Grove O2 Sensor Pro (GGC2330-O2)** - Oxygen concentration (Analog: A5)
-- **Sparkfun Soil Moisture Sensor** - (Analog: A0, A1, A2)
+- **Sparkfun Soil Moisture Sensor** - Soil Moisture (Analog: A0, A1, A2)
 
 ## Wiring
 
