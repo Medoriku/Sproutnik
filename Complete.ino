@@ -12,10 +12,12 @@
  * 
  * Hardware Components:
  *   - Airflow sensor (Digital pulse counter)
- *   - 3x Soil moisture sensors (Capacitive)
- *   - BME280 atmospheric sensor (SparkFun I2C)
+ *   - 3x Soil moisture sensors (Analog)
+ *   - BME280 atmospheric sensor (I2C)
  *   - Grove O2 sensor (Analog)
- * 
+ *   - TMP117 x2 (I2C)
+ *   - Luminosity sensor (I2C)
+ 
  * Updates Log:
  *   - January 21, 2026: Initial release
  */
