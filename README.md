@@ -11,6 +11,7 @@ Arduino-based sensor integration for atmospheric and environmental data collecti
 - **Adafruit TSL2591** - Light/luminosity sensor (I2C: 0x29)
 - **PFA Fixed Flow Meter (Seeed)** - Flow measurement (Digital: D2 pulse)
 - **Grove O2 Sensor Pro (GGC2330-O2)** - Oxygen concentration (Analog: A5)
+- **Sparkfun Soil Moisture Sensor** (Analog: A0, A1, A2)
 
 ## Wiring
 
