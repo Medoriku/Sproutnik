@@ -17,7 +17,7 @@
  *   - Grove O2 sensor (Analog)
  *   - TMP117 x2 (I2C)
  *   - Luminosity sensor (I2C)
- 
+ *   - XENSIV PAS CO₂ concentration sensor (I2C) 
  * Updates Log:
  *   - January 21, 2026: Initial release
  */
