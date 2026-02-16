@@ -1,0 +1,17 @@
+{  
+    "name":"XENSIV PAS CO2",
+    "keywords":"gas, co2, sensor, photoacoustic, sensor2go",
+    "description":"C/C++ library for Infineon XENSIV™ PAS CO2 sensor",
+    "repository":{  
+       "type":"git",
+       "url":"https://github.com/Infineon/arduino-pas-co2-sensor.git",
+       "branch":"master"
+    },
+    "version":"3.2.1",
+    "license":"MIT",
+    "frameworks":"arduino",
+    "platforms":[  
+       "infineonxmc",
+       "atmelavr"
+    ]
+ }
